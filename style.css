@@ -1,0 +1,109 @@
+css
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #222;
+}
+
+/* Grid Layout (Default Desktop: 3 columns) */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-name {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+.add-to-cart-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #3e8e41; /* Darkened green background */
+}
+
+/* Responsive Media Queries */
+
+/* Tablet View (max-width: 768px): 2 columns */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 300px);
+        gap: 20px;
+    }
+}
+
+/* Mobile View (max-width: 480px): 1 column */
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: 300px;
+        gap: 20px;
+    }
+}
